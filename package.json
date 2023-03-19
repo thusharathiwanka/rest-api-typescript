@@ -1,27 +1,30 @@
 {
-	"name": "rest-api-typescript",
-	"version": "1.0.0",
-	"description": "",
-	"main": "./src/index.ts",
-	"scripts": {
-		"start": "node ./src/index.ts",
-		"start:dev": "nodemon",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/thusharathiwanka/rest-api-typescript.git"
-	},
-	"keywords": [],
-	"author": "Thushara Thiwanka <thusharathiwanka123@gmail.com>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/thusharathiwanka/rest-api-typescript/issues"
-	},
-	"homepage": "https://github.com/thusharathiwanka/rest-api-typescript#readme",
-	"devDependencies": {
-		"nodemon": "^2.0.21",
-		"ts-node": "^10.9.1",
-		"typescript": "^5.0.2"
-	}
+  "name": "rest-api-typescript",
+  "version": "1.0.0",
+  "description": "REST API with TypeScript",
+  "main": "./src/index.ts",
+  "scripts": {
+    "prestart": "rimraf dist && npx tsc",
+    "start": "node ./dist",
+    "start:dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thusharathiwanka/rest-api-typescript.git"
+  },
+  "keywords": [],
+  "author": "Thushara Thiwanka <thusharathiwanka123@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thusharathiwanka/rest-api-typescript/issues"
+  },
+  "homepage": "https://github.com/thusharathiwanka/rest-api-typescript#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "rimraf": "^4.4.0"
+  }
 }
