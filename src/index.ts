@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
+import router from './routes';
+
 const app = express();
 dotenv.config();
 
@@ -15,9 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors({ credentials: true }));
 app.use(cookieParser());
 
-app.get('/', (_, res) =>
-  res.status(200).json({ message: 'REST API with Typescript' })
-);
+app.use('/', router());
 
 mongoose
   .connect(MONGO_URI)
